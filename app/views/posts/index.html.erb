@@ -3,18 +3,16 @@
 <% @posts.each do |post| %>
     <div>
         <% if user_signed_in? %>
-            <p>Author: <%= post.user.username = post.user.email.split("@")[0] %></p>
+            <p>Author: <%= post.user.email.split("@")[0] %></p>
         <% end %>
         <p>Title: <%= post.title %></p>
-        <p>Content: <%= post.body %></p><br>
-    </div>
+        <p>Content: <%= post.body %></p>
+    </div><br>
 <% end %>
 
 <% if user_signed_in? %>
     <p>Create a new post <%= link_to "here", new_post_path %></p>
     <p>Sign out <%= link_to "here", destroy_user_session_path, method: :delete %></p>
-<% end %>
-
-<% if !user_signed_in? %>
+<% else %>
     <p>Sign in <%= link_to "here", user_session_path %></p>
 <% end %>
