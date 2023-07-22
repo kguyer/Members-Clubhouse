@@ -1,7 +1,5 @@
 class PostsController < ApplicationController
     before_action :authenticate_user!, except: :index
-    before_action :set_current_user
-    before_action :authenticate_resource!
 
     def index
         @posts = Post.all
@@ -23,10 +21,6 @@ class PostsController < ApplicationController
     end
 
     private
-
-    def set_current_user
-        @current_user = current_user
-    end
 
     def post_params
         params.require(:post).permit(:title, :body)

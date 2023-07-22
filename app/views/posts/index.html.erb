@@ -3,7 +3,7 @@
 <% @posts.each do |post| %>
     <div>
         <% if user_signed_in? %>
-            <p>Author: <%= post.user.name %></p>
+            <p>Author: <%= post.user.username %></p>
         <% end %>
         <p>Title: <%= post.title %></p>
         <p>Content: <%= post.body %></p>
