@@ -1,0 +1,20 @@
+<h1>All Posts</h1>
+
+<% @posts.each do |post| %>
+    <div>
+        <% if user_signed_in? %>
+            <p>Author: <%= post.user.name %></p>
+        <% end %>
+        <p>Title: <%= post.title %></p>
+        <p>Content: <%= post.body %></p>
+    </div>
+<% end %>
+
+<% if user_signed_in? %>
+    <p>Create a new post <%= link_to "here", new_post_path %></p>
+    <p>Sign out <%= link_to "here", destroy_user_session_path, method: :delete %></p>
+<% end %>
+
+<% if !user_signed_in? %>
+    <p>Sign in <%= link_to "here", user_session_path %></p>
+<% end %>
