@@ -1,24 +1,25 @@
-# README
+# Members Only Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Features
+While signed in:
+- Create posts
+- View the posts as well as the author of each post
 
-Things you may want to cover:
+While signed out:
+- Only a post's title and content are visible. Author is hidden
 
-* Ruby version
+### Ruby Version
+3.2.2
 
-* System dependencies
+### Rails Version
+7.0.6
 
-* Configuration
+### Devise Gem Version
+4.9
 
-* Database creation
+### Setup
+1. Clone the repo `git clone https://github.com/kguyer/Members-Clubhouse`
+2. Setup database `bin/rails db:migrate`
+3. Start the server `rails server`
+4. Visit `localhost:3000`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
