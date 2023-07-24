@@ -21,5 +21,5 @@ While signed out:
 1. Clone the repo `git clone https://github.com/kguyer/Members-Clubhouse`
 2. Setup database `bin/rails db:migrate`
 3. Start the server `rails server`
-4. Visit `localhost:3000`
+4. Visit `localhost:3000` to view the app in your browser
 
