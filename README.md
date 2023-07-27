@@ -20,7 +20,7 @@ Version 7.0.6
 Run `rails -v` to check your system version
 
 ### Devise Gem Version
-Verison 4.9  
+Version 4.9  
 Check out the README at https://github.com/heartcombo/devise for instructions on installing the Devise gem.
 
 ### Setup
